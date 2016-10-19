@@ -1,13 +1,15 @@
-.left {                         /*nav bar on left */
+/* .left {                         /*nav bar on left */
   position:fixed;
-  padding:20px;
+  padding:0px;
   top: 0; left: 0;
   height:100%; width:18%;
   background:black;
-  z-index:0;
+  content:url
+  z-index:1;
 }
+/*
 
-ul {
+/*ul {
   list-style:none;
   margin:0; padding:0;
 
@@ -15,20 +17,61 @@ ul {
     margin-bottom:25px;
   }
 }
+*/
+
+/*
+.about {
+  position: fixed;
+  top: 35%;
+  z-index: 2;
+  padding: 0px;
+  width:18%;
+  background:yellow;
+
+}
 
 
+.projects {
+  position: absolute;
+  bottom: 70%
+  z-index: 2;
+  padding: 55px;
+  width: 18%;
+  background: green;
+}
 
-/* .right {
+/*
+
+ /*
+ .right {
   position:relative;
   margin-left:700px; // push the right column past the left column, with some room as well.
   transition:margin-left ease .5s; // fluid transition when resizing
+  z-index: 0;
 */
 
+/*
 .logo {                           /* logo with p in it */
   position: absolute;
   border-radius: 50%;
   left: 65px;
   width: 236px;
   height: 236px;
-  z-index:1;
+  z-index:2;
+}
+
+
+
+
+.wrap{
+  display: table;
+  background:black;
+  height: 100%; width: 18%;
+  background: black;
+}
+  /*.block{
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+  }
 }
