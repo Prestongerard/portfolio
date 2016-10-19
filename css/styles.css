@@ -1,0 +1,34 @@
+.left {                         /*nav bar on left */
+  position:fixed;
+  padding:20px;
+  top: 0; left: 0;
+  height:100%; width:18%;
+  background:black;
+  z-index:0;
+}
+
+ul {
+  list-style:none;
+  margin:0; padding:0;
+
+  li {
+    margin-bottom:25px;
+  }
+}
+
+
+
+/* .right {
+  position:relative;
+  margin-left:700px; // push the right column past the left column, with some room as well.
+  transition:margin-left ease .5s; // fluid transition when resizing
+*/
+
+.logo {                           /* logo with p in it */
+  position: absolute;
+  border-radius: 50%;
+  left: 65px;
+  width: 236px;
+  height: 236px;
+  z-index:1;
+}
