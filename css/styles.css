@@ -1,20 +1,43 @@
+img.ufo {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
 
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
 
-.img {
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.ufo {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+.logo {
   padding: 0px;
+  opacity: .6;
+  border-radius: 25px;
   position:relative;
-  width:151px:
+  width:20%px:
   z-index: 2;
-  transition:
 }
 
 
 .wrap{
-  position: relative;
+  position: fixed;
+  opacity: .2;
+  border-radius: 25px;
   display: table;
   background:black;
-  height: 100%; width: 200px;
+  height: 61.5%; width: 20%;
   background: black;
-  z-index: 1;
+  z-index: 2;
 
 }
