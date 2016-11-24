@@ -8,11 +8,21 @@ $(document).ready(function() {
     left: "0px"
   },1000);
 
-//hide projects divs on page loads
+//hide nav-bar off screen and shrink logo on click
+$(".preston-logo").click(function(){
+$( ".left-nav" ).animate({
+  opacity: .5,
+  left: "-=200",
+}, 1000, function(){
+      // animation complete.
+});
+});
+
+//hide project divs on page loads
 
   $(".square-cyan, .square-green, .square-orange, .square-purple").hide();
 
-  $(".square-about").click(function(){
+  $(".about-link").click(function(){
     console.log(activatedColor);
     aboutClick();
   });
@@ -39,25 +49,28 @@ $(document).ready(function() {
 
 
   function aboutClick(){
-    if (activatedColor === "default" || "about") {
+    if (activatedColor === "about") {
       return;
     }
+
+    else if (activatedColor === "green"){
+      $(".square-green").fadeOut("slow");
+      $(".square-about").fadeIn("slow");
+      activatedColor = "default";
+    }
+
     else if (activatedColor === "orange"){
       $(".square-orange").fadeOut("slow");
       $(".square-about").fadeIn("slow");
-      activatedColor = "about";
+      activatedColor = "default";
     }
     else if (activatedColor === "cyan") {
       $(".square-cyan").fadeOut("slow");
       $(".square-about").fadeIn("slow");
-      activatedColor = "about";
+      activatedColor = "default";
     }
     else if (activatedColor === "purple") {
       $(".square-purple").fadeOut("slow");
-      $(".square-about").fadeIn("slow");
-      activatedColor = "about";
-    }
-    else if (activatedColor === "default") {
       $(".square-about").fadeIn("slow");
       activatedColor = "default";
     }
@@ -67,7 +80,7 @@ $(document).ready(function() {
     if(activatedColor === "green") {
       return;
     }
-    else if (activatedColor === "about"){
+    else if (activatedColor === "default"){
       $(".square-about").fadeOut("slow");
       $(".square-green").fadeIn("slow");
       activatedColor = "green";
@@ -87,15 +100,17 @@ $(document).ready(function() {
       $(".square-green").fadeIn("slow");
       activatedColor = "green";
     }
-    else if (activatedColor === "default") {
-      $(".square-green").fadeIn("slow");
-      activatedColor = "green";
-    }
+
   };
 
   function orangeClick(){
     if(activatedColor === "orange") {
       return;
+    }
+    else if (activatedColor === "default"){
+      $(".square-about").fadeOut("slow");
+      $(".square-orange").fadeIn("slow");
+      activatedColor = "orange";
     }
     else if (activatedColor === "green"){
         $(".square-green").fadeOut("slow");
@@ -112,15 +127,16 @@ $(document).ready(function() {
       $(".square-orange").fadeIn("slow");
       activatedColor = "orange";
     }
-    else if (activatedColor === "default") {
-      $(".square-orange").fadeIn("slow");
-      activatedColor = "orange";
-    }
   };
 
   function cyanClick(){
     if(activatedColor === "cyan") {
       return;
+    }
+    else if (activatedColor === "default"){
+      $(".square-about").fadeOut("slow");
+      $(".square-cyan").fadeIn("slow");
+      activatedColor = "cyan";
     }
     else if (activatedColor === "orange"){
       $(".square-orange").fadeOut("slow");
@@ -137,15 +153,17 @@ $(document).ready(function() {
       $(".square-cyan").fadeIn("slow");
       activatedColor = "cyan";
     }
-    else if (activatedColor === "default") {
-      $(".square-cyan").fadeIn("slow");
-      activatedColor = "cyan";
-    }
   };
 
   function purpleClick(){
     if(activatedColor === "purple") {
       return;
+    }
+    else if (activatedColor ===
+      "default"){
+      $(".square-about").fadeOut("slow");
+      $(".square-purple").fadeIn("slow");
+      activatedColor = "purple";
     }
     else if (activatedColor === "orange"){
       $(".square-orange").fadeOut("slow");
@@ -159,10 +177,6 @@ $(document).ready(function() {
     }
     else if (activatedColor === "cyan") {
       $(".square-cyan").fadeOut("slow");
-      $(".square-purple").fadeIn("slow");
-      activatedColor = "purple";
-    }
-    else if (activatedColor === "default") {
       $(".square-purple").fadeIn("slow");
       activatedColor = "purple";
     }

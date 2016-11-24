@@ -2,20 +2,21 @@
   height: 100%;
   width: 100%;
   margin: 0 auto 0 auto;
-  background-image: url('../img/ufo.jpg')
+  background-image: url('../img/neptune.jpg')
 }
 
 .left-nav {
   position: relative;
   left: -300px;
-  height: 100%;
+  height: 775px;
   width: 235px;
   float: left;
+  z-index: 9;
 }
 
 .preston-logo {
   position: absolute;
-  top: 7px;
+  top: 27px;
   left: 0px;
   width: 275px;
   height: 275px;
@@ -26,12 +27,12 @@
 
 .drawer {
   position: absolute;
-  top: 235px;
+  top: 250px;
   bottom: 1000px;
-  height: 100%;
+  height: 775px;
   width: 236px;
-  background-color: black;
-  opacity: .9;
+  background-color: grey;
+  opacity: .7;
 }
 
 ul {
@@ -39,23 +40,94 @@ ul {
   color: white;
 }
 
+.github-icon{
+  position: absolute;
+  background-image: url('../img/github2.png');
+  height: 50px;
+  width: 50px;
+  top: 712px;
+  left: 15px;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.linkedin-icon {
+  position: absolute;
+  background-image: url('../img/linkedinicon.png');
+  height: 50px;
+  width: 50px;
+  top: 712px;
+  left: 170px;
+  cursor: pointer;
+}
+
+.email-icon {
+  position: absolute;
+  background-image: url('../img/email.png');
+  height: 50px;
+  width: 50px;
+  top: 712px;
+  left: 92px;
+  cursor: pointer;
+}
+
 .content-container {
   position: absolute;
   display: inline-block;
-  top: 15px;
-  left: 250px;
+  top: 35px;
+  left: 10px;
   right: 0px;
-  width: 1600px;
+  width: 1900px;
   height: 1070px;
   background-color: black;
-  opacity: .9;
+  opacity: .5;
+}
+
+.about-link, .green-link, .orange-link, .cyan-link, .purple-link {
+  position: relative;
+  border-top: 1px solid #96d1f8;
+  background: #788187;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2a2a2b), to(#788187));
+  background: -webkit-linear-gradient(top, #2a2a2b, #788187);
+  background: -moz-linear-gradient(top, #2a2a2b, #788187);
+  background: -ms-linear-gradient(top, #2a2a2b, #788187);
+  background: -o-linear-gradient(top, #2a2a2b, #788187);
+  padding: 20px 40px;
+  width: 155px;
+  left: -39px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: white;
+  font-size: 16px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.about-link:hover, .green-link:hover, .orange-link:hover, .cyan-link:hover, .purple-link:hover {
+  position: relative;
+  border-top-color: #a62d2d;
+  background: #a62d2d;
+  color: #ccc;
+}
+
+.about-link:active, .green-link:active, .orange-link:active, .cyan-link:active, .purple-link:active {
+  position: relative;;
+  border-top-color: #1b435e;
+  background: #1b435e;
 }
 
 .square-about, .square-green, .square-orange, .square-cyan, .square-purple {
   position: absolute;
   top: 45px;
-  left: 45px;
-  width: 1505px;
+  left: 300px;
+  width: 1495px;
   height: 985px;
 }
 
@@ -78,8 +150,4 @@ ul {
 
 .square-purple {
   background-color: purple;
-}
-
-.about-link, .green-link, .orange-link, .cyan-link, .purple-link {
-  cursor: pointer;
 }
