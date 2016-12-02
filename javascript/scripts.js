@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var isDocked = false;
   var activatedColor = "default";
   console.log(activatedColor);
 
@@ -6,20 +7,42 @@ $(document).ready(function() {
 
   $(".left-nav").animate({
     left: "0px"
-  },1000);
+  },850);
 
-//hide nav-bar off screen and shrink logo on click
+//slide nav-bar off screen
 $(".preston-logo").click(function(){
-$( ".left-nav" ).animate({
-  opacity: .5,
-  left: "-=200",
-}, 1000, function(){
-      // animation complete.
+  if (isDocked === false){
+    $(".left-nav").animate({
+      opacity: .5,
+      left: "-200px",
+    }, 800);
+    isDocked = true;
+    return;
+  } else {
+    $(".left-nav").animate({
+      opacity: 1,
+      left: "0px",
+    }, 800);
+    isDocked = false;
+    return;
+  }
 });
+
+//social media links
+$(".github-icon").click(function () {
+       window.open(
+         'https://www.github.com/prestongerard',
+         '_blank'
+       );
+});
+$(".linkedin-icon").click(function () {
+          window.open(
+            'https://www.linkedin.com/in/prestonambrosky',
+            '_blank'
+          );
 });
 
 //hide project divs on page loads
-
   $(".square-cyan, .square-green, .square-orange, .square-purple").hide();
 
   $(".about-link").click(function(){

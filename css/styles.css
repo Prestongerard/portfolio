@@ -2,7 +2,7 @@
   height: 100%;
   width: 100%;
   margin: 0 auto 0 auto;
-  background-image: url('../img/neptune.jpg')
+  background-color: black;
 }
 
 .left-nav {
@@ -48,7 +48,6 @@ ul {
   top: 712px;
   left: 15px;
   cursor: pointer;
-  z-index: 9;
 }
 
 .linkedin-icon {
